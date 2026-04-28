@@ -9,38 +9,255 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TrocasRouteImport } from './routes/trocas'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as OfertasRouteImport } from './routes/ofertas'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as GarantiaRouteImport } from './routes/garantia'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as CatalogoRouteImport } from './routes/catalogo'
+import { Route as CarrinhoRouteImport } from './routes/carrinho'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProdutoIdRouteImport } from './routes/produto.$id'
 
+const TrocasRoute = TrocasRouteImport.update({
+  id: '/trocas',
+  path: '/trocas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfertasRoute = OfertasRouteImport.update({
+  id: '/ofertas',
+  path: '/ofertas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GarantiaRoute = GarantiaRouteImport.update({
+  id: '/garantia',
+  path: '/garantia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatalogoRoute = CatalogoRouteImport.update({
+  id: '/catalogo',
+  path: '/catalogo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarrinhoRoute = CarrinhoRouteImport.update({
+  id: '/carrinho',
+  path: '/carrinho',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProdutoIdRoute = ProdutoIdRouteImport.update({
+  id: '/produto/$id',
+  path: '/produto/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/catalogo': typeof CatalogoRoute
+  '/checkout': typeof CheckoutRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/garantia': typeof GarantiaRoute
+  '/login': typeof LoginRoute
+  '/ofertas': typeof OfertasRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/trocas': typeof TrocasRoute
+  '/produto/$id': typeof ProdutoIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/catalogo': typeof CatalogoRoute
+  '/checkout': typeof CheckoutRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/garantia': typeof GarantiaRoute
+  '/login': typeof LoginRoute
+  '/ofertas': typeof OfertasRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/trocas': typeof TrocasRoute
+  '/produto/$id': typeof ProdutoIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/catalogo': typeof CatalogoRoute
+  '/checkout': typeof CheckoutRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/garantia': typeof GarantiaRoute
+  '/login': typeof LoginRoute
+  '/ofertas': typeof OfertasRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/trocas': typeof TrocasRoute
+  '/produto/$id': typeof ProdutoIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/carrinho'
+    | '/catalogo'
+    | '/checkout'
+    | '/contato'
+    | '/faq'
+    | '/garantia'
+    | '/login'
+    | '/ofertas'
+    | '/privacidade'
+    | '/trocas'
+    | '/produto/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/carrinho'
+    | '/catalogo'
+    | '/checkout'
+    | '/contato'
+    | '/faq'
+    | '/garantia'
+    | '/login'
+    | '/ofertas'
+    | '/privacidade'
+    | '/trocas'
+    | '/produto/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/carrinho'
+    | '/catalogo'
+    | '/checkout'
+    | '/contato'
+    | '/faq'
+    | '/garantia'
+    | '/login'
+    | '/ofertas'
+    | '/privacidade'
+    | '/trocas'
+    | '/produto/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CarrinhoRoute: typeof CarrinhoRoute
+  CatalogoRoute: typeof CatalogoRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ContatoRoute: typeof ContatoRoute
+  FaqRoute: typeof FaqRoute
+  GarantiaRoute: typeof GarantiaRoute
+  LoginRoute: typeof LoginRoute
+  OfertasRoute: typeof OfertasRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
+  TrocasRoute: typeof TrocasRoute
+  ProdutoIdRoute: typeof ProdutoIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trocas': {
+      id: '/trocas'
+      path: '/trocas'
+      fullPath: '/trocas'
+      preLoaderRoute: typeof TrocasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ofertas': {
+      id: '/ofertas'
+      path: '/ofertas'
+      fullPath: '/ofertas'
+      preLoaderRoute: typeof OfertasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/garantia': {
+      id: '/garantia'
+      path: '/garantia'
+      fullPath: '/garantia'
+      preLoaderRoute: typeof GarantiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catalogo': {
+      id: '/catalogo'
+      path: '/catalogo'
+      fullPath: '/catalogo'
+      preLoaderRoute: typeof CatalogoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carrinho': {
+      id: '/carrinho'
+      path: '/carrinho'
+      fullPath: '/carrinho'
+      preLoaderRoute: typeof CarrinhoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,21 +265,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/produto/$id': {
+      id: '/produto/$id'
+      path: '/produto/$id'
+      fullPath: '/produto/$id'
+      preLoaderRoute: typeof ProdutoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CarrinhoRoute: CarrinhoRoute,
+  CatalogoRoute: CatalogoRoute,
+  CheckoutRoute: CheckoutRoute,
+  ContatoRoute: ContatoRoute,
+  FaqRoute: FaqRoute,
+  GarantiaRoute: GarantiaRoute,
+  LoginRoute: LoginRoute,
+  OfertasRoute: OfertasRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
+  TrocasRoute: TrocasRoute,
+  ProdutoIdRoute: ProdutoIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
