@@ -444,7 +444,15 @@ export const products: Product[] = [
   },
 ];
 
-export const getProductById = (id: string) => products.find((p) => p.id === id);
+export const FALLBACK_IMAGE = iphoneDetail;
+
+export const getProductById = (id: string) => {
+  const p = products.find((prod) => prod.id === id);
+  if (!p) return undefined;
+  const image = p.image || FALLBACK_IMAGE;
+  const gallery = p.gallery && p.gallery.length > 0 ? p.gallery : [image];
+  return { ...p, image, gallery };
+};
 
 export const formatPrice = (price: number) =>
   price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });

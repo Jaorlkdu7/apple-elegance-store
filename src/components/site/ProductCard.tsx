@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Plus, Star } from "lucide-react";
-import { type Product, formatPrice } from "@/data/products";
+import { type Product, formatPrice, FALLBACK_IMAGE } from "@/data/products";
 import { useCart } from "@/store/cart";
 import { toast } from "sonner";
 
@@ -12,8 +12,9 @@ export function ProductCard({ product }: { product: Product }) {
       <Link to="/produto/$id" params={{ id: product.id }} className="block relative">
         <div className="relative aspect-square overflow-hidden bg-secondary">
           <img
-            src={product.image}
+            src={product.image || FALLBACK_IMAGE}
             alt={product.name}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = FALLBACK_IMAGE; }}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
           />
