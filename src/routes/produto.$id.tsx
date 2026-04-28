@@ -11,7 +11,7 @@ export const Route = createFileRoute("/produto/$id")({
   loader: ({ params }) => {
     const product = getProductById(params.id);
     if (!product) throw notFound();
-    return { product };
+    return { product } as const;
   },
   head: ({ loaderData }) => ({
     meta: loaderData
