@@ -36,7 +36,7 @@ export const Route = createFileRoute("/produto/$id")({
 });
 
 function ProductPage() {
-  const { product } = Route.useLoaderData();
+  const { product } = Route.useLoaderData() as { product: NonNullable<ReturnType<typeof getProductById>> };
   const addItem = useCart((s) => s.addItem);
   const [color, setColor] = useState(product.colors[0]);
   const [storage, setStorage] = useState(product.storage);
