@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
-import { getProductById, formatPrice, products } from "@/data/products";
+import { getProductById, formatPrice, products, FALLBACK_IMAGE } from "@/data/products";
 import { ProductCard } from "@/components/site/ProductCard";
 import { useCart } from "@/store/cart";
 import { useState } from "react";
@@ -87,8 +87,9 @@ function ProductPage() {
                   </span>
                 )}
                 <img
-                  src={product.gallery[activeImg]}
+                  src={product.gallery[activeImg] ?? FALLBACK_IMAGE}
                   alt={product.name}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = FALLBACK_IMAGE; }}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -102,7 +103,7 @@ function ProductPage() {
                         i === activeImg ? "border-primary" : "border-border"
                       }`}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      <img src={img} alt="" onError={(e) => { (e.currentTarget as HTMLImageElement).src = FALLBACK_IMAGE; }} className="w-full h-full object-cover" />
                     </button>
                   ))}
                 </div>
