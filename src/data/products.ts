@@ -1,5 +1,13 @@
 import iphone14ProMax from "@/assets/iphone-14-pro-max.png";
-import iphones1314 from "@/assets/iphones-13-14.png";
+import iphone14Pro from "@/assets/iphone-14-pro.png";
+import iphone14Plus from "@/assets/iphone-14-plus.png";
+import iphone14 from "@/assets/iphone-14.png";
+import iphone13 from "@/assets/iphone-13.png";
+import iphone13Pro from "@/assets/iphone-13-pro.png";
+import iphone13ProMax from "@/assets/iphone-13-pro-max.png";
+import iphone12ProMax from "@/assets/iphone-12-pro-max.png";
+import iphone11 from "@/assets/iphone-11.png";
+import iphone16e from "@/assets/iphone-16e.png";
 import iphones1415 from "@/assets/iphones-14-15.png";
 import iphones1516 from "@/assets/iphones-15-16.png";
 import iphones16 from "@/assets/iphones-16.png";
@@ -175,8 +183,8 @@ export const products: Product[] = [
     price: 2949.99,
     oldPrice: 3100,
     discount: 5,
-    image: iphones16,
-    gallery: [iphones16],
+    image: iphone16e,
+    gallery: [iphone16e],
     category: "iPhone 16",
     description: "O iPhone 16 mais acessível, com todo desempenho Apple.",
     specs: baseSpecs("Câmera 48MP", "Até 26h vídeo", "Apple A18"),
@@ -291,8 +299,8 @@ export const products: Product[] = [
     price: 3150,
     oldPrice: 3500,
     discount: 10,
-    image: iphones1415,
-    gallery: [iphones1415],
+    image: iphone14Pro,
+    gallery: [iphone14Pro],
     category: "iPhone 14",
     description: "Dynamic Island, câmeras Pro e desempenho excepcional.",
     specs: baseSpecs("Tripla 48MP Pro", "Até 23h vídeo", "Apple A16 Bionic"),
@@ -310,8 +318,8 @@ export const products: Product[] = [
     price: 2549,
     oldPrice: 2650,
     discount: 4,
-    image: iphones1314,
-    gallery: [iphones1314],
+    image: iphone14,
+    gallery: [iphone14],
     category: "iPhone 14",
     description: "Excelente custo-benefício com câmeras avançadas e bateria duradoura.",
     specs: baseSpecs("Dupla 12MP", "Até 20h vídeo", "Apple A15 Bionic"),
@@ -329,8 +337,8 @@ export const products: Product[] = [
     price: 2599.99,
     oldPrice: 2800,
     discount: 7,
-    image: iphones1415,
-    gallery: [iphones1415],
+    image: iphone14Plus,
+    gallery: [iphone14Plus],
     category: "iPhone 14",
     description: "Tela grande de 6,7\" com bateria de longa duração.",
     specs: baseSpecs("Dupla 12MP", "Até 26h vídeo", "Apple A15 Bionic"),
@@ -348,8 +356,8 @@ export const products: Product[] = [
     price: 2200,
     oldPrice: 2400,
     discount: 8,
-    image: iphones1314,
-    gallery: [iphones1314],
+    image: iphone13,
+    gallery: [iphone13],
     category: "iPhone 13",
     description: "iPhone 13 com chip A15 e câmera dupla de 12MP.",
     specs: baseSpecs("Dupla 12MP", "Até 19h vídeo", "Apple A15 Bionic"),
@@ -367,8 +375,8 @@ export const products: Product[] = [
     price: 2899.99,
     oldPrice: 3100,
     discount: 6,
-    image: iphones1314,
-    gallery: [iphones1314],
+    image: iphone13Pro,
+    gallery: [iphone13Pro],
     category: "iPhone 13",
     description: "ProMotion 120Hz e câmeras profissionais com modo Cinema.",
     specs: baseSpecs("Tripla 12MP Pro", "Até 22h vídeo", "Apple A15 Bionic"),
@@ -386,8 +394,8 @@ export const products: Product[] = [
     price: 3099.99,
     oldPrice: 3300,
     discount: 6,
-    image: iphones1314,
-    gallery: [iphones1314],
+    image: iphone13ProMax,
+    gallery: [iphone13ProMax],
     category: "iPhone 13",
     description: "Tela grande, ProMotion e a melhor bateria da geração.",
     specs: baseSpecs("Tripla 12MP Pro", "Até 28h vídeo", "Apple A15 Bionic"),
@@ -405,8 +413,8 @@ export const products: Product[] = [
     price: 2399.99,
     oldPrice: 2600,
     discount: 8,
-    image: iphone14ProMax,
-    gallery: [iphone14ProMax],
+    image: iphone12ProMax,
+    gallery: [iphone12ProMax],
     category: "iPhone 12",
     description: "Câmeras Pro com LiDAR e tela Super Retina XDR.",
     specs: baseSpecs("Tripla 12MP + LiDAR", "Até 20h vídeo", "Apple A14 Bionic"),
@@ -424,8 +432,8 @@ export const products: Product[] = [
     price: 1399.99,
     oldPrice: 1600,
     discount: 13,
-    image: iphone14ProMax,
-    gallery: [iphone14ProMax],
+    image: iphone11,
+    gallery: [iphone11],
     category: "iPhone 11",
     description: "Excelente entrada para o universo Apple. Câmera dupla e bateria duradoura.",
     specs: baseSpecs("Dupla 12MP", "Até 17h vídeo", "Apple A13 Bionic"),
