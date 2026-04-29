@@ -41,26 +41,7 @@ function ProductPage() {
   const [color, setColor] = useState(product.colors[0]);
   const [storage, setStorage] = useState(product.storage);
   const [activeImg, setActiveImg] = useState(0);
-  const [cep, setCep] = useState("");
-  const [shipping, setShipping] = useState<{ days: string; price: string }[] | null>(null);
-  const [shippingLoading, setShippingLoading] = useState(false);
 
-  const calcShipping = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (cep.replace(/\D/g, "").length !== 8) {
-      toast.error("Informe um CEP válido (8 dígitos)");
-      return;
-    }
-    setShippingLoading(true);
-    setTimeout(() => {
-      setShipping([
-        { days: "PAC — 5 a 8 dias úteis", price: formatPrice(34.9) },
-        { days: "SEDEX — 2 a 3 dias úteis", price: formatPrice(58.9) },
-        { days: "Expresso — 1 dia útil", price: formatPrice(89.9) },
-      ]);
-      setShippingLoading(false);
-    }, 700);
-  };
 
   const related = products.filter((p) => p.id !== product.id && p.category === product.category).slice(0, 4);
 
@@ -274,42 +255,7 @@ function ProductPage() {
               </ul>
             </div>
 
-            {/* Shipping */}
-            <div className="bg-card rounded-2xl border border-border p-6 shadow-card">
-              <h3 className="text-xs font-bold text-primary uppercase tracking-wider mb-3">Calcular frete e prazo</h3>
-              <form onSubmit={calcShipping} className="flex gap-2">
-                <input
-                  type="text"
-                  value={cep}
-                  onChange={(e) => setCep(e.target.value)}
-                  placeholder="00000-000"
-                  maxLength={9}
-                  className="flex-1 px-3 py-2 border border-input rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-                <button
-                  type="submit"
-                  disabled={shippingLoading}
-                  className="bg-primary text-primary-foreground font-semibold px-4 py-2 rounded-lg hover:bg-primary-hover disabled:opacity-50"
-                >
-                  {shippingLoading ? "..." : "Calcular"}
-                </button>
-              </form>
-              {shipping && (
-                <ul className="mt-3 space-y-2 text-sm">
-                  {shipping.map((s) => (
-                    <li key={s.days} className="flex justify-between border-b border-border pb-2 last:border-b-0">
-                      <span className="text-muted-foreground">{s.days}</span>
-                      <span className="font-semibold">{s.price}</span>
-                    </li>
-                  ))}
-                  <li className="flex items-center gap-2 text-success font-semibold pt-1">
-                    <Check className="w-4 h-4" /> Retirada grátis na loja (BH/MG)
-                  </li>
-                </ul>
-              )}
-            </div>
-          </div>
-        </div>
+
 
         {/* Related */}
         {related.length > 0 && (
