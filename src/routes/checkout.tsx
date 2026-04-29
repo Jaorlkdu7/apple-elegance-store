@@ -31,7 +31,7 @@ const initialForm: FormState = {
   district: "", city: "", state: "",
 };
 
-const PIX_KEY = "contato@iphonespremium.com.br";
+const PIX_KEY = "00020101021126580014br.gov.bcb.pix013622866713-d87f-44f9-a788-35312a9ef36a5204000053039865802BR5916BRUNO G M JUNIOR6008CONTAGEM62070503***63045D85";
 
 function CheckoutPage() {
   const { items, total, clear } = useCart();
@@ -186,7 +186,7 @@ function CheckoutPage() {
               <div className="bg-card rounded-2xl border border-border p-6 shadow-card space-y-4">
                 <h2 className="font-bold text-lg">Como deseja receber?</h2>
                 <div className="grid sm:grid-cols-2 gap-3">
-                  <OptionCard active={delivery === "entrega"} onClick={() => setDelivery("entrega")} icon={Truck} title="Receber em casa" desc="Frete grátis acima de R$ 3.000" />
+                  <OptionCard active={delivery === "entrega"} onClick={() => setDelivery("entrega")} icon={Truck} title="Receber em casa" desc="Combine entrega pelo WhatsApp" />
                   <OptionCard active={delivery === "retirada"} onClick={() => setDelivery("retirada")} icon={Store} title="Retirar na loja" desc="Grátis — BH/MG" />
                 </div>
                 {delivery === "entrega" && (
@@ -227,16 +227,16 @@ function CheckoutPage() {
 
                 <div className="bg-muted/40 rounded-xl p-4 space-y-3">
                   <div>
-                    <p className="text-xs text-muted-foreground font-semibold">CHAVE PIX (E-mail)</p>
+                    <p className="text-xs text-muted-foreground font-semibold">PIX COPIA E COLA</p>
                     <div className="flex items-center gap-2 mt-1">
-                      <code className="flex-1 bg-card border border-border rounded-lg px-3 py-2 text-sm font-mono break-all">{PIX_KEY}</code>
+                      <code className="flex-1 bg-card border border-border rounded-lg px-3 py-2 text-xs font-mono break-all max-h-24 overflow-auto">{PIX_KEY}</code>
                       <button onClick={copyPix} className="px-3 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold flex items-center gap-1.5">
                         <Copy className="w-4 h-4" /> Copiar
                       </button>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div><p className="text-muted-foreground text-xs">Beneficiário</p><p className="font-semibold">iPhones Premium LTDA</p></div>
+                    <div><p className="text-muted-foreground text-xs">Beneficiário</p><p className="font-semibold">Bruno G M Junior</p></div>
                     <div><p className="text-muted-foreground text-xs">Valor a pagar</p><p className="font-bold text-price text-base">{formatPrice(finalTotal)}</p></div>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ function CheckoutPage() {
             <div className="border-t border-border pt-3 space-y-1.5 text-sm">
               <div className="flex justify-between"><span className="text-muted-foreground">Subtotal</span><span>{formatPrice(subtotal)}</span></div>
               <div className="flex justify-between text-success"><span>Desconto PIX (5%)</span><span>-{formatPrice(pixDiscount)}</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Frete</span><span>{delivery === "retirada" ? "Grátis" : (subtotal > 3000 ? "Grátis" : "A combinar")}</span></div>
+              
               <div className="flex justify-between text-lg font-bold pt-2 border-t border-border"><span>Total</span><span className="text-price">{formatPrice(finalTotal)}</span></div>
             </div>
             <p className="text-xs text-muted-foreground pt-2 border-t border-border">Pagamento exclusivo via PIX com 5% de desconto.</p>

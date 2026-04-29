@@ -52,7 +52,7 @@ function HomePage() {
             </div>
             <div className="flex gap-6 pt-4 text-sm">
               <div className="flex items-center gap-2"><Shield className="w-4 h-4" /> Garantia inclusa</div>
-              <div className="flex items-center gap-2"><Truck className="w-4 h-4" /> Frete para todo Brasil</div>
+              <div className="flex items-center gap-2"><Truck className="w-4 h-4" /> Entrega combinada via WhatsApp</div>
             </div>
           </div>
           <div className="relative">
