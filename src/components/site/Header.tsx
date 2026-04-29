@@ -22,7 +22,7 @@ export function Header() {
       <div className="bg-primary text-primary-foreground py-1.5 text-xs">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <span className="hidden sm:inline">✅ iPhones originais com garantia • Pagamento via PIX</span>
-          <a href="https://wa.me/5531975082558" className="flex items-center gap-1.5 hover:underline">
+          <a href="https://wa.me/553175082558" className="flex items-center gap-1.5 hover:underline">
             <Phone className="w-3 h-3" /> (31) 97508-2558
           </a>
         </div>

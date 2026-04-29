@@ -33,7 +33,7 @@ export function Footer() {
             Especialistas em iPhones originais, novos e seminovos, com garantia e procedência comprovada.
           </p>
           <div className="flex gap-3 mt-4">
-            <a href="https://wa.me/5531975082558" className="w-9 h-9 rounded-full bg-background/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="WhatsApp">
+            <a href="https://wa.me/553175082558" className="w-9 h-9 rounded-full bg-background/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="WhatsApp">
               <MessageCircle className="w-4 h-4" />
             </a>
             <a href="https://instagram.com" className="w-9 h-9 rounded-full bg-background/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Instagram">
