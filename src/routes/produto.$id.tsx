@@ -126,7 +126,7 @@ function ProductPage() {
               </dl>
 
               <a
-                href={`https://wa.me/5531991195308?text=${encodeURIComponent(`Olá! Tenho dúvidas sobre o ${product.name}`)}`}
+                href={`https://wa.me/5531975082558?text=${encodeURIComponent(`Olá! Tenho dúvidas sobre o ${product.name}`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 flex items-center gap-2 bg-secondary hover:bg-accent rounded-lg p-3 text-sm transition-colors"
