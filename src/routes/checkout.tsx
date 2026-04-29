@@ -110,12 +110,20 @@ function CheckoutPage() {
   };
 
   const sendWhatsApp = () => {
+    if (!pixPaid) {
+      toast.error("Confirme o pagamento do PIX antes de chamar no WhatsApp.");
+      return;
+    }
     window.open(buildWhatsAppLink(orderText), "_blank");
   };
 
   const finishOrder = () => {
+    if (!pixPaid) {
+      toast.error("Confirme o pagamento do PIX para autorizar o pedido.");
+      return;
+    }
     setConfirmed(true);
-    toast.success("Pedido registrado! Aguarde nosso contato.");
+    toast.success("Pedido autorizado! Aguarde nosso contato.");
     setTimeout(() => {
       clear();
       navigate({ to: "/" });
