@@ -16,7 +16,7 @@ function ContactPage() {
           <p className="text-muted-foreground mt-2">Atendimento humano, rápido e sem robôs.</p>
           <ul className="mt-6 space-y-4">
             <Item icon={MessageCircle} title="WhatsApp" text="+55 (31) 97508-2558" href="https://wa.me/5531975082558" />
-            <Item icon={Phone} title="Telefone" text="(31) 99119-5308" />
+            <Item icon={Phone} title="Telefone" text="(31) 97508-2558" />
             <Item icon={Mail} title="E-mail" text="contato@iphonespremium.com" />
             <Item icon={MapPin} title="Endereço" text="Rua Capitão Antônio Joaquim da Paixão, 123 — Belo Horizonte/MG" />
             <Item icon={Clock} title="Horário" text="Segunda a Sábado, 9h às 19h" />

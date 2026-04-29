@@ -61,7 +61,7 @@ function CatalogPage() {
             <div className="bg-card rounded-xl border border-border p-4 shadow-card">
               <h3 className="text-xs font-bold text-primary uppercase mb-3 tracking-wider">Entre em contato</h3>
               <ul className="space-y-2 text-sm">
-                <li>📱 (31) 99119-5308</li>
+                <li>📱 (31) 97508-2558</li>
                 <li>📍 BH/MG</li>
                 <li>🕒 Seg–Sáb 9h–19h</li>
               </ul>

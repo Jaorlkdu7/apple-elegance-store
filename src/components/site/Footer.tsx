@@ -69,7 +69,7 @@ export function Footer() {
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
               Rua Capitão Antônio Joaquim da Paixão, 123 — Belo Horizonte/MG
             </li>
-            <li>📱 (31) 99119-5308</li>
+            <li>📱 (31) 97508-2558</li>
             <li>✉ contato@iphonespremium.com</li>
             <li>🕒 Seg–Sáb 9h–19h</li>
           </ul>
