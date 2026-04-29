@@ -22,8 +22,8 @@ export function Header() {
       <div className="bg-primary text-primary-foreground py-1.5 text-xs">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <span className="hidden sm:inline">🚚 Frete grátis para BH em compras acima de R$ 3.000</span>
-          <a href="https://wa.me/5531991195308" className="flex items-center gap-1.5 hover:underline">
-            <Phone className="w-3 h-3" /> (31) 99119-5308
+          <a href="https://wa.me/5531975082558" className="flex items-center gap-1.5 hover:underline">
+            <Phone className="w-3 h-3" /> (31) 97508-2558
           </a>
         </div>
       </div>
