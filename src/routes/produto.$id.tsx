@@ -254,7 +254,8 @@ function ProductPage() {
                 ))}
               </ul>
             </div>
-
+          </div>
+        </div>
 
 
         {/* Related */}
