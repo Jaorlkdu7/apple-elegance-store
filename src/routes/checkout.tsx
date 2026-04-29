@@ -40,6 +40,7 @@ function CheckoutPage() {
   const [delivery, setDelivery] = useState<"entrega" | "retirada">("entrega");
   const [form, setForm] = useState<FormState>(initialForm);
   const [confirmed, setConfirmed] = useState(false);
+  const [pixPaid, setPixPaid] = useState(false);
 
   const subtotal = total();
   const pixDiscount = subtotal * 0.05;
