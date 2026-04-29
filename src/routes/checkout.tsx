@@ -259,12 +259,33 @@ function CheckoutPage() {
                   </ol>
                 </div>
 
-                <button onClick={sendWhatsApp} className="w-full bg-[oklch(0.65_0.17_150)] hover:opacity-90 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity">
+                <label className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-colors ${pixPaid ? "border-success bg-success/10" : "border-border bg-card hover:border-primary/40"}`}>
+                  <input
+                    type="checkbox"
+                    checked={pixPaid}
+                    onChange={(e) => setPixPaid(e.target.checked)}
+                    className="mt-1 w-4 h-4 accent-[oklch(0.65_0.17_150)]"
+                  />
+                  <span className="text-sm">
+                    <span className="font-semibold block">Já realizei o pagamento via PIX</span>
+                    <span className="text-muted-foreground text-xs">Marque esta opção após efetuar o PIX no valor de {formatPrice(finalTotal)} para autorizar seu pedido.</span>
+                  </span>
+                </label>
+
+                <button
+                  onClick={sendWhatsApp}
+                  disabled={!pixPaid}
+                  className="w-full bg-[oklch(0.65_0.17_150)] hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity"
+                >
                   <MessageCircle className="w-5 h-5" /> Enviar pedido pelo WhatsApp
                 </button>
 
-                <button onClick={finishOrder} className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 rounded-xl transition-colors">
-                  Confirmar pedido — {formatPrice(finalTotal)}
+                <button
+                  onClick={finishOrder}
+                  disabled={!pixPaid}
+                  className="w-full bg-primary hover:bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed text-primary-foreground font-bold py-3.5 rounded-xl transition-colors"
+                >
+                  Autorizar pedido — {formatPrice(finalTotal)}
                 </button>
 
                 <button onClick={() => setStep(2)} className="w-full text-sm text-muted-foreground hover:text-foreground">← Voltar para entrega</button>
