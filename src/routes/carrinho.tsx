@@ -73,10 +73,6 @@ function CartPage() {
               <span className="text-muted-foreground">Subtotal</span>
               <span className="font-semibold">{formatPrice(subtotal)}</span>
             </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-muted-foreground">Frete</span>
-              <span className="text-success font-semibold">Calcular no checkout</span>
-            </div>
             <div className="flex justify-between text-sm pb-3 border-b border-border">
               <span className="text-muted-foreground">No PIX (5% off)</span>
               <span className="font-semibold text-success">{formatPrice(pixPrice)}</span>
