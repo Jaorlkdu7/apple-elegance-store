@@ -33,11 +33,15 @@ export const Route = createRootRoute({
       { title: "iPhones Premium — Loja oficial de iPhones novos e seminovos" },
       { name: "description", content: "Compre iPhones novos e seminovos com garantia, parcelamento em 12x, PIX e entrega para todo o Brasil. Procedência comprovada." },
       { name: "author", content: "iPhones Premium" },
-      { property: "og:title", content: "iPhones Premium — Loja oficial de iPhones" },
-      { property: "og:description", content: "iPhones novos e seminovos com garantia. Pagamento via PIX com 5% de desconto." },
+      { property: "og:title", content: "iPhones Premium — Loja oficial de iPhones novos e seminovos" },
+      { property: "og:description", content: "Compre iPhones novos e seminovos com garantia, parcelamento em 12x, PIX e entrega para todo o Brasil. Procedência comprovada." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "iPhones Premium — Loja oficial de iPhones novos e seminovos" },
+      { name: "twitter:description", content: "Compre iPhones novos e seminovos com garantia, parcelamento em 12x, PIX e entrega para todo o Brasil. Procedência comprovada." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6b6ac496-8eb9-4db6-a05d-fa5032d07a8f/id-preview-9c141986--07105013-06ae-4fe0-89d0-38a188c9eb1d.lovable.app-1777508789321.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6b6ac496-8eb9-4db6-a05d-fa5032d07a8f/id-preview-9c141986--07105013-06ae-4fe0-89d0-38a188c9eb1d.lovable.app-1777508789321.png" },
     ],
     links: [
       {
