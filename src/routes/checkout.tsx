@@ -277,15 +277,7 @@ function CheckoutPage() {
                   disabled={!pixPaid}
                   className="w-full bg-[oklch(0.65_0.17_150)] hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity"
                 >
-                  <MessageCircle className="w-5 h-5" /> Enviar pedido pelo WhatsApp
-                </button>
-
-                <button
-                  onClick={finishOrder}
-                  disabled={!pixPaid}
-                  className="w-full bg-primary hover:bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed text-primary-foreground font-bold py-3.5 rounded-xl transition-colors"
-                >
-                  Autorizar pedido — {formatPrice(finalTotal)}
+                  <MessageCircle className="w-5 h-5" /> Enviar comprovante pelo WhatsApp
                 </button>
 
                 <button onClick={() => setStep(2)} className="w-full text-sm text-muted-foreground hover:text-foreground">← Voltar para entrega</button>
