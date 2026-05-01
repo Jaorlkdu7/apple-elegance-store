@@ -272,13 +272,22 @@ function CheckoutPage() {
                   </span>
                 </label>
 
-                <button
-                  onClick={sendWhatsApp}
-                  disabled={!pixPaid}
-                  className="w-full bg-[oklch(0.65_0.17_150)] hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity"
-                >
-                  <MessageCircle className="w-5 h-5" /> Enviar comprovante pelo WhatsApp
-                </button>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <button
+                    onClick={sendWhatsApp}
+                    disabled={!pixPaid}
+                    className="bg-[oklch(0.65_0.17_150)] hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity"
+                  >
+                    <MessageCircle className="w-5 h-5" /> Enviar pelo WhatsApp
+                  </button>
+                  <button
+                    onClick={finishOrder}
+                    disabled={!pixPaid}
+                    className="bg-primary hover:bg-primary-hover disabled:opacity-40 disabled:cursor-not-allowed text-primary-foreground font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-opacity"
+                  >
+                    <ShieldCheck className="w-5 h-5" /> Autorizar pedido pelo site
+                  </button>
+                </div>
 
                 <button onClick={() => setStep(2)} className="w-full text-sm text-muted-foreground hover:text-foreground">← Voltar para entrega</button>
               </div>
